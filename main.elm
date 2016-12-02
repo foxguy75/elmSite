@@ -57,7 +57,7 @@ view model =
   [ Layout.fixedHeader
   ]
   { drawer = []
-  , header = []
+  , header = [ myheader ]
   , main = [ viewbody model ]
   , tabs = ([],[])
   }
@@ -96,3 +96,8 @@ passwordConfirmView model =
     , Textfield.onInput UpdatePasswordAgain
     ]
   ]
+
+myheader : Html Msg
+myheader =
+  h3 []
+  [ text "Ben Blog" ]
